@@ -7,7 +7,7 @@ class PortFQN():
     def __call__(self, obj, attr, obj_ref):
         ports = obj.prototype.ports
         for port in ports:
-        #Does not work because interafce is not yet resolved
+        #Does not work because interface is not yet resolved
             if port.interface.name == obj_ref.obj_name:
                 return port
         return None
