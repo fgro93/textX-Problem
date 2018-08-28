@@ -1,0 +1,6 @@
+import "ports.imodel"
+
+component HasPort {
+	requires Port0
+	requires Port1
+}

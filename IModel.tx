@@ -1,0 +1,2 @@
+IModel: (interfaces+=Interface)*;
+Interface: name = ID;

@@ -1,0 +1,7 @@
+import "hasPort.fmodel"
+
+component ConnectPort {
+	contains HasPort
+	
+	connect HasPort.Port1
+}

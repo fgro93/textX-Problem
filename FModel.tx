@@ -1,0 +1,24 @@
+import IModel
+
+FModel:
+(imports+=Import)*
+(components+=Component)*;
+
+Import:
+	'import' importURI=STRING;
+
+Connector: 'connect' prototype=[Prototype]'.'port=[Port];
+
+Prototype:
+	'contains' component=[Component] ('as' name=ID)?;
+
+Component: 
+	'component' name=ID
+	('{'(
+             prototypes+=Prototype |
+             ports+=Port |
+             connectors+=Connector
+         )*'}')?;
+
+Port:
+	'requires' interface=[Interface];
