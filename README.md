@@ -1,6 +1,9 @@
 # textX-Problem and Solution
 I used python 3.7, textX 1.7.1
 
+## Problem
+Names and references were not resolved, but needed to resolve current references.
+
 ```
 Traceback (most recent call last):
   File "...\textX-Problem\Main.py", line 39, in <module>
@@ -21,5 +24,6 @@ Traceback (most recent call last):
     if port.interface.name == obj_ref.obj_name:
 AttributeError: 'NoneType' object has no attribute 'name'
 ```
-Solution: Using [Postponed](https://textx.readthedocs.io/en/stable/scoping/#technical-aspects-and-implementation-details)
+## Solution
+Using [Postponed](https://textx.readthedocs.io/en/stable/scoping/#technical-aspects-and-implementation-details) objectes to postpone resolving current reference. 
 For more details: https://github.com/igordejanovic/textX/issues/83
